@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Fan && Lin</title>
 <link rel="shortcut icon" href="images/favicon.ico">
 <link href="stylesheets/default.css" type="text/css" rel="stylesheet">
@@ -41,7 +43,7 @@
       Baby, I love you forever!<br />
     </div>
     <div id="loveHeart">
-      <canvas id="garden"></canvas>
+      <canvas id="garden" width="275" height="300"></canvas>
       <div id="words">
         <div id="messages">
           林小猪，这是我们在一起的时光。
@@ -76,11 +78,11 @@ if (!document.createElement('canvas').getContext) {
   $("#copyright").css("bottom", "10px");
   document.execCommand("stop");
 } else {
-  setTimeout(function () {
+  setTimeout(function () {//5秒后开始画爱心
     startHeartAnimation();
   }, 5000);
 
-  timeElapse(together);
+  timeElapse(together); //时间计算
   setInterval(function () {
     timeElapse(together);
   }, 500);
